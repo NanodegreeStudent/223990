@@ -1,0 +1,245 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/toolbar_Linear"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<include-->
+        <!--android:id="@+id/toolbar"-->
+        <!--layout="@layout/toolbar" />-->
+
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:id="@+id/main_content">-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/searchTitle"
+        android:id="@+id/searchTitle"
+        android:textSize="30sp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/whichDay"
+            android:id="@+id/whichDay" />
+
+        <com.rey.material.widget.Spinner
+            style="@style/Material.Widget.Spinner.Light"
+            android:id="@+id/whichDaySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="70dp"
+            app:rd_style="@style/Material.Drawable.Ripple.Wave.Light"
+            app:rd_enable="true"
+            app:rd_delayClick="false"
+            app:spn_labelEnable="false"
+            app:spn_arrowSwitchMode="true"
+            app:spn_arrowAnimDuration="10"
+            app:spn_dividerAnimDuration="10"
+            app:spn_arrowInterpolator="@android:anim/decelerate_interpolator"
+            android:layout_marginLeft="10dp"/>
+        <!--<Spinner-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/whichDaySpinner"-->
+        <!--android:spinnerMode="dropdown"-->
+        <!--android:entries="@array/weekDaySpinner" />-->
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/depTime"
+            android:id="@+id/depTime" />
+
+        <com.rey.material.widget.Spinner
+            style="@style/Material.Widget.Spinner.Light"
+            android:id="@+id/depTimeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="70dp"
+            app:rd_style="@style/Material.Drawable.Ripple.Wave.Light"
+            app:rd_enable="true"
+            app:rd_delayClick="false"
+            app:spn_labelEnable="false"
+            app:spn_arrowSwitchMode="true"
+            app:spn_arrowAnimDuration="10"
+            app:spn_dividerAnimDuration="10"
+            app:spn_arrowInterpolator="@android:anim/decelerate_interpolator"
+            android:layout_marginLeft="16dp"/>
+        <!--<Spinner-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/depTimeSpinner"-->
+        <!--android:entries="@array/timeSpinner"-->
+        <!--android:spinnerMode="dropdown" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/retTime"
+            android:id="@+id/retTime" />
+
+
+        <com.rey.material.widget.Spinner
+            style="@style/Material.Widget.Spinner.Light"
+            android:id="@+id/retTimeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="70dp"
+            app:rd_style="@style/Material.Drawable.Ripple.Wave.Light"
+            app:rd_enable="true"
+            app:rd_delayClick="false"
+            app:spn_labelEnable="false"
+            app:spn_arrowSwitchMode="true"
+            app:spn_arrowAnimDuration="10"
+            app:spn_dividerAnimDuration="10"
+            app:spn_arrowInterpolator="@android:anim/decelerate_interpolator"
+            android:layout_marginLeft="16dp"/>
+
+        <!--<Spinner-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/retTimeSpinner"-->
+        <!--android:entries="@array/timeSpinner"-->
+        <!--android:spinnerMode="dropdown" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/freq"
+            android:id="@+id/textView2" />
+
+        <com.rey.material.widget.Spinner
+            style="@style/Material.Widget.Spinner.Light"
+            android:id="@+id/freqSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="70dp"
+            app:rd_style="@style/Material.Drawable.Ripple.Wave.Light"
+            app:rd_enable="true"
+            app:rd_delayClick="false"
+            app:spn_labelEnable="false"
+            app:spn_arrowSwitchMode="true"
+            app:spn_arrowAnimDuration="10"
+            app:spn_dividerAnimDuration="10"
+            app:spn_arrowInterpolator="@android:anim/decelerate_interpolator"
+            android:layout_marginLeft="16dp"/>
+
+        <!--<Spinner-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/freqSpinner"-->
+        <!--android:entries="@array/freqSpinner"-->
+        <!--android:spinnerMode="dropdown" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/area"
+            android:id="@+id/area" />
+
+        <com.rey.material.widget.Spinner
+            style="@style/Material.Widget.Spinner.Light"
+            android:id="@+id/areaSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="70dp"
+            app:rd_style="@style/Material.Drawable.Ripple.Wave.Light"
+            app:rd_enable="true"
+            app:rd_delayClick="false"
+            app:spn_labelEnable="false"
+            app:spn_arrowSwitchMode="true"
+            app:spn_arrowAnimDuration="10"
+            app:spn_dividerAnimDuration="10"
+            app:spn_arrowInterpolator="@android:anim/decelerate_interpolator"
+            android:layout_marginLeft="16dp"/>
+
+        <!--<Spinner-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/areaSpinner"-->
+        <!--android:entries="@array/areaSpinner"-->
+        <!--android:spinnerMode="dropdown"/>-->
+    </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:text="@string/submitButtonText"
+                android:layout_gravity="center_horizontal"/>
+
+            <!--<Button-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/submitButtonText"-->
+                <!--android:id="@+id/submit_button" />-->
+        </LinearLayout>
+
+
+    </LinearLayout>
+<!--</LinearLayout>-->

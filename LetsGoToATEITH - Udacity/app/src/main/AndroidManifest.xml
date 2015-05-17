@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.letsgotoateith" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.fotistsalampounis.letsgotoateith.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fotistsalampounis.letsgotoateith.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter android:label="@string/app_name" >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fotistsalampounis.letsgotoateith.OwnCarActivity"
+            android:label="@string/title_activity_own_car"
+            android:parentActivityName="com.fotistsalampounis.letsgotoateith.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fotistsalampounis.letsgotoateith.MainActivity" />
+        </activity>
+
+        <provider
+            android:name="com.fotistsalampounis.letsgotoateith.data.TransfersProvider"
+            android:authorities="com.example.user.letsgotoateith" />
+
+        <activity
+            android:name="com.fotistsalampounis.letsgotoateith.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:parentActivityName="com.fotistsalampounis.letsgotoateith.LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fotistsalampounis.letsgotoateith.LoginActivity" />
+        </activity>
+        <activity
+            android:name="com.fotistsalampounis.letsgotoateith.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:parentActivityName="com.fotistsalampounis.letsgotoateith.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fotistsalampounis.letsgotoateith.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.fotistsalampounis.letsgotoateith.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName="com.fotistsalampounis.letsgotoateith.LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fotistsalampounis.letsgotoateith.LoginActivity" />
+        </activity>
+        <activity
+            android:name="com.fotistsalampounis.letsgotoateith.ResultsActivity"
+            android:label="@string/title_activity_results"
+            android:parentActivityName="com.fotistsalampounis.letsgotoateith.SearchActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fotistsalampounis.letsgotoateith.SearchActivity" />
+        </activity>
+    </application>
+
+</manifest>

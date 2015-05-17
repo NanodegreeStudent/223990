@@ -1,0 +1,226 @@
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView2"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <!--<include-->
+        <!--android:id="@+id/toolbar"-->
+        <!--layout="@layout/toolbar" />-->
+
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:id="@+id/main_content">-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcomeText"
+            android:id="@+id/welcomeText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textSize="19sp"/>
+
+
+
+        <com.rey.material.widget.EditText
+            style="@style/Material.Widget.EditText.Light"
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/textColorPrimary"
+            app:et_inputId="@+id/textfield_et_username_label_input"
+            android:inputType="textEmailAddress"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/usernameHint"
+            app:et_supportMode="helper"
+            app:et_supportTextErrorColor="@color/colorPrimary"
+            app:et_dividerErrorColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearanceMine"
+            app:et_labelTextSize="17dp"
+            app:et_supportTextAppearance="@style/EditTextMine"/>
+        <!--app:et_helper="@string/usernameErrorHint"-->
+
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/username"-->
+            <!--android:hint="@string/usernameHint"/>-->
+
+        <com.rey.material.widget.EditText
+            style="@style/Material.Widget.EditText.Light"
+            android:id="@+id/fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/textColorPrimary"
+            app:et_inputId="@+id/textfield_et_fullname_label_input"
+            android:inputType="textPersonName"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/fullnameHint"
+            app:et_supportMode="helper"
+            app:et_supportTextErrorColor="@color/colorPrimary"
+            app:et_dividerErrorColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearanceMine"
+            app:et_labelTextSize="17dp"
+            app:et_supportTextAppearance="@style/EditTextMine"/>
+        <!--app:et_helper="@string/fullnameErrorHint"-->
+
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:inputType="textPersonName"-->
+            <!--android:hint="@string/fullnameHint"-->
+            <!--android:ems="10"-->
+            <!--android:id="@+id/fullname" />-->
+
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/school"-->
+            <!--android:hint="@string/schoolHint"/>-->
+
+        <com.rey.material.widget.EditText
+            style="@style/Material.Widget.EditText.Light"
+            android:id="@+id/school"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/textColorPrimary"
+            app:et_inputId="@+id/textfield_et_school_label_input"
+            android:ems="10"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/schoolHint"
+            app:et_supportMode="helper"
+            app:et_supportTextErrorColor="@color/colorPrimary"
+            app:et_dividerErrorColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearanceMine"
+            app:et_labelTextSize="17dp"
+            app:et_supportTextAppearance="@style/EditTextMine"/>
+        <!--app:et_helper="@string/schoolErrorHint"-->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/areaText"
+                android:id="@+id/areaTextView"
+                android:textSize="14sp"/>
+
+            <com.rey.material.widget.Spinner
+                style="@style/Material.Widget.Spinner.Light"
+                android:id="@+id/areaSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="70dp"
+                app:rd_style="@style/Material.Drawable.Ripple.Wave.Light"
+                app:rd_enable="true"
+                app:rd_delayClick="false"
+                app:spn_labelEnable="false"
+                app:spn_arrowSwitchMode="true"
+                app:spn_arrowAnimDuration="10"
+                app:spn_dividerAnimDuration="10"
+                app:spn_arrowInterpolator="@android:anim/decelerate_interpolator"
+                android:layout_marginLeft="9dp"/>
+
+            <!--<Spinner-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/areaSpinner"-->
+                <!--android:entries="@array/areaSpinner"/>-->
+        </LinearLayout>
+
+        <com.rey.material.widget.EditText
+            style="@style/Material.Widget.EditText.Light"
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/textColorPrimary"
+            app:et_inputId="@+id/textfield_et_email_label_input"
+            android:inputType="textEmailAddress"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/email"
+            app:et_supportMode="helper"
+            app:et_supportTextErrorColor="@color/colorPrimary"
+            app:et_dividerErrorColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearanceMine"
+            app:et_labelTextSize="17dp"
+            app:et_supportTextAppearance="@style/EditTextMine"/>
+        <!--app:et_helper="@string/emailTeitheErrorHint"-->
+
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:inputType="textEmailAddress"-->
+            <!--android:hint="@string/email"-->
+            <!--android:ems="10"-->
+            <!--android:id="@+id/email" />-->
+
+        <com.rey.material.widget.EditText
+            style="@style/Material.Widget.EditText.Light"
+            android:id="@+id/facebookLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/textColorPrimary"
+            app:et_inputId="@+id/textfield_et_facebookLink_label_input"
+            app:et_supportMode="none"
+            android:ems="10"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/facebook"
+            android:textAppearance="@style/TextAppearanceMine"
+            app:et_labelTextSize="17dp"
+            app:et_supportTextAppearance="@style/EditTextMine"/>
+
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/facebookLink"-->
+            <!--android:hint="@string/facebook"-->
+            <!--/>-->
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/signUpButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/signUp"
+            android:layout_gravity="center_horizontal"/>
+
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/signUp"-->
+            <!--android:id="@+id/signUpButton"-->
+            <!--android:layout_gravity="center_horizontal" />-->
+
+        <!--</LinearLayout>-->
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

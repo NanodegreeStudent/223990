@@ -1,0 +1,158 @@
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView2"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <!--<include-->
+        <!--android:id="@+id/toolbar"-->
+        <!--layout="@layout/toolbar" />-->
+
+        <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:id="@+id/main_content">-->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/loginTitle"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp"
+            android:textSize="34sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+            android:text="@string/loginText"
+            android:id="@+id/loginText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="19dp"
+            android:textSize="24sp"/>
+
+        <com.rey.material.widget.EditText
+            style="@style/Material.Widget.EditText.Light"
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/textColorPrimary"
+            app:et_inputId="@+id/textfield_et_username_label_input"
+            app:et_supportMode="helper"
+            android:inputType="textEmailAddress"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/username"
+            android:hint="@string/usernameHint"
+            app:et_supportTextErrorColor="@color/colorPrimary"
+            app:et_dividerErrorColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearanceMine"
+            app:et_labelTextSize="17dp"
+            app:et_supportTextAppearance="@style/EditTextMine"/>
+
+        <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:inputType="textEmailAddress"-->
+        <!--android:ems="10"-->
+        <!--android:id="@+id/username"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:text="@string/username"-->
+        <!--android:layout_marginTop="76dp"-->
+        <!--android:layout_marginLeft="50dp"-->
+        <!--android:layout_marginRight="50dp"-->
+        <!--android:hint="@string/usernameHint"/>-->
+
+
+        <com.rey.material.widget.EditText
+            style="@style/Material.Widget.EditText.Light"
+            android:textColor="@color/textColorPrimary"
+            app:et_inputId="@+id/textfield_et_pass_label_input"
+            app:et_supportMode="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:id="@+id/password"
+            android:layout_gravity="center_horizontal"
+            android:password="true"
+            android:hint="@string/passwordHint"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:enabled="false"
+            android:textSize="15sp" />
+
+        <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:inputType="textPassword"-->
+        <!--android:ems="10"-->
+        <!--android:id="@+id/password"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:password="true"-->
+        <!--android:hint="@string/passwordHint"-->
+        <!--android:layout_marginLeft="50dp"-->
+        <!--android:layout_marginRight="50dp"-->
+
+        <!--/>-->
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/loginButton"
+            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:background="@color/colorAccent"
+            android:text="@string/loginButtonText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"/>
+
+        <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/loginButtonText"-->
+        <!--android:id="@+id/loginButton"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="20dp" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registerText"
+            android:id="@+id/registerText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="56dp"
+            android:textSize="20sp"
+            android:enabled="true"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aboutText"
+            android:id="@+id/aboutText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/colorAccent"  />
+
+        <!--</LinearLayout>-->
+
+    </LinearLayout>
+
+
+
+</ScrollView>
+
+
