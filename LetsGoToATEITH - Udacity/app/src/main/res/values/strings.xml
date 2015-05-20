@@ -101,7 +101,7 @@
     <string name="ownACarTitle">Register your car</string>
     <string name="searchTitle">Search for a ride</string>
     <string name="title_activity_manage_transportations">Manage Transportations</string>
-    <string name="transpPopUpText">You have succesfuly registered in this transport.</string>
+    <string name="transpPopUpText">You have successfully registered in this transport.</string>
     <string name="title_activity_transport_details">Users in transport</string>
     <string name="title_activity_display_transp_user_reg">User details</string>
     <string name="deleteFromTransportTitle">Delete from transport</string>
