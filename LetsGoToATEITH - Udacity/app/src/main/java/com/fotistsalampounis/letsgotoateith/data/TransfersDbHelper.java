@@ -12,7 +12,7 @@ import com.fotistsalampounis.letsgotoateith.data.TransfersContract.TransportsEnt
  */
 public class TransfersDbHelper extends SQLiteOpenHelper {
     // If you change the database schema, you must increment the database version.
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     public static final String DATABASE_NAME = "transfers.db";
 
@@ -26,11 +26,11 @@ public class TransfersDbHelper extends SQLiteOpenHelper {
         final String SQL_CREATE_USERS_TABLE = "CREATE TABLE " +
 
                 UsersEntry.TABLE_NAME + " (" +
-                UsersEntry.COLUMN_USERNAME + " VARCHAR , " +
+                UsersEntry.COLUMN_USERNAME + " VARCHAR UNIQUE, " +
                 UsersEntry.COLUMN_AREA + " INTEGER  , " +
                 UsersEntry.COLUMN_SCHOOL + " VARCHAR , " +
                 UsersEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT , " +
-                UsersEntry.COLUMN_EMAIL + " VARCHAR , " +
+                UsersEntry.COLUMN_EMAIL + " VARCHAR UNIQUE, " +
                 UsersEntry.COLUMN_FB + " VARCHAR , " +
                 UsersEntry.COLUMN_FULLNAME + " VARCHAR " +
                 " );";

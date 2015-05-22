@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,6 +28,8 @@ public class RegisterFragment extends Fragment {
 
     EditText username,fullname,school,email,facebookLink;
     Spinner area;
+    private boolean exceptionToBeThrown;
+
     public RegisterFragment() {
     }
 
@@ -102,26 +105,46 @@ public class RegisterFragment extends Fragment {
                     else
                         mNewValues.put(TransfersContract.UsersEntry.COLUMN_FB, "No Facebook Data");
 
-                    new AsyncTask<Object, Void, Void>() {
-                        @Override
-                        protected Void doInBackground(Object... params) {
-                            Context context=getActivity();
-                            context.getContentResolver().insert((Uri)params[0],(ContentValues)params[1]);
-                            return null;
-                        }
-                    }.execute(uri, mNewValues);
+                        new AsyncTask<Object, Void, Void>() {
+                            @Override
+                            protected Void doInBackground(Object... params) {
+                                exceptionToBeThrown = false;
+                                Context context = getActivity();
+                                try {
+                                    context.getContentResolver().insert((Uri) params[0], (ContentValues) params[1]);
+                                } catch (android.database.SQLException e) {
+                                    exceptionToBeThrown = true;
+                                    Log.v("Exception","Exception caught!");
+                                }
+                                return null;
+                            }
 
+                            @Override
+                            protected void onPostExecute(Void Void) {
+                                if (exceptionToBeThrown) {
+                                    Log.v("Exception Popup", "Exception popup is here");
+                                    Dialog dialog = new Dialog(getActivity(), getString(R.string.userRegFailedPopup), getString(R.string.registerFailedPopUp));
+                                    dialog.setOnAcceptButtonClickListener(new View.OnClickListener() {
 
-                    Dialog dialog = new Dialog(getActivity(), getString(R.string.userRegPopup), getString(R.string.registerPopUp));
-                    dialog.setOnAcceptButtonClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            getActivity().finish();
+                                        }
+                                    });
+                                    dialog.show();
+                                } else {
+                                    Dialog dialog = new Dialog(getActivity(), getString(R.string.userRegPopup), getString(R.string.registerPopUp));
+                                    dialog.setOnAcceptButtonClickListener(new View.OnClickListener() {
 
-                        @Override
-                        public void onClick(View v) {
-                            getActivity().finish();
-                        }
-                    });
-
-                    dialog.show();
+                                        @Override
+                                        public void onClick(View v) {
+                                            getActivity().finish();
+                                        }
+                                    });
+                                    dialog.show();
+                                }
+                            }
+                        }.execute(uri, mNewValues);
 
                 }
             }
